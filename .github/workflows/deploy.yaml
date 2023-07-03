@@ -10,6 +10,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
 
+    env:
+      NODE_ENV: production
+      VITE_KEY: ${{ secrets.VITE_KEY }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
